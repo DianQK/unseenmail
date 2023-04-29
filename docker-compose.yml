@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  unseenmail:
+    image: ghcr.io/dianqk/unseenmail:latest
+    container_name: unseenmail
+    # environment:
+    #  - TZ=UTC    # optional: Change to your desired timezone
+    # user: 1000:1000 # optional: Set custom user/group or uid/gid
+    volumes:
+      - ./app:/app
+    restart: unless-stopped
